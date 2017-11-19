@@ -29,10 +29,6 @@ public final class Helloworld {
         getNameBytes();
   }
   /**
-   * <pre>
-   * HelloRequest のリクエスト定義
-   * </pre>
-   *
    * Protobuf type {@code Hello.HelloRequest}
    */
   public  static final class HelloRequest extends
@@ -294,10 +290,6 @@ public final class Helloworld {
       return builder;
     }
     /**
-     * <pre>
-     * HelloRequest のリクエスト定義
-     * </pre>
-     *
      * Protobuf type {@code Hello.HelloRequest}
      */
     public static final class Builder extends
@@ -562,10 +554,6 @@ public final class Helloworld {
         getMessageBytes();
   }
   /**
-   * <pre>
-   * HelloReply のレスポンス定義
-   * </pre>
-   *
    * Protobuf type {@code Hello.HelloReply}
    */
   public  static final class HelloReply extends
@@ -827,10 +815,6 @@ public final class Helloworld {
       return builder;
     }
     /**
-     * <pre>
-     * HelloReply のレスポンス定義
-     * </pre>
-     *
      * Protobuf type {@code Hello.HelloReply}
      */
     public static final class Builder extends
