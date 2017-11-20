@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
       val stub = CoffeeGrpc.newBlockingStub(channel)
 
       val request = CoffeeOuterClass.CoffeeRequest.newBuilder()
-          .setName("takusemba")
+          .setName("hot coffee")
           .build()
 
       Single
@@ -37,9 +37,10 @@ class MainActivity : AppCompatActivity() {
           .observeOn(AndroidSchedulers.mainThread())
           .subscribe(
               {
-                findViewById<TextView>(R.id.message).append(
-                    "\n name: " + it.name + "\n" + "price: " + it.price + "\n" + "message: " + it.message + "\n\n"
-                )
+                findViewById<TextView>(R.id.message).text = (
+                    it.message + "\n\n"
+                        + findViewById<TextView>(R.id.message).text
+                    )
               },
               { /**  error handling */ }
           )
