@@ -20,6 +20,14 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  dexOptions {
+    preDexLibraries true
+    maxProcessCount 8
+
+    // You do not need to specify a value for javaMaxHeapSize to enable dex-in-process.
+    // https://developer.android.com/studio/build/optimize-your-build.html#increase_gradle_heap
+    // javaMaxHeapSize "4g"
+  }
 }
 
 dependencies {
@@ -35,4 +43,6 @@ dependencies {
   implementation "io.grpc:grpc-protobuf:1.7.0"
   implementation "io.grpc:grpc-stub:1.7.0"
   implementation "javax.annotation:javax.annotation-api:1.2"
+  implementation 'io.reactivex:rxjava:1.3.0'
+  implementation 'io.reactivex:rxandroid:1.2.1'
 }
