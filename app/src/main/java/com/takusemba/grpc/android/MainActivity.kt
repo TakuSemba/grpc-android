@@ -3,6 +3,7 @@ package com.takusemba.grpc.android
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
 import com.takusemba.grpc.android.protos.CoffeeGrpc
 import com.takusemba.grpc.android.protos.CoffeeOuterClass
 import io.grpc.ManagedChannelBuilder
@@ -35,7 +36,11 @@ class MainActivity : AppCompatActivity() {
           }.subscribeOn(Schedulers.io())
           .observeOn(AndroidSchedulers.mainThread())
           .subscribe(
-              { /** do something */ },
+              {
+                findViewById<TextView>(R.id.message).append(
+                    "\n name: " + it.name + "\n" + "price: " + it.price + "\n" + "message: " + it.message + "\n\n"
+                )
+              },
               { /**  error handling */ }
           )
     }
