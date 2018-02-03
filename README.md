@@ -2,6 +2,8 @@
   <img src="https://github.com/TakuSemba/grpc-android/blob/master/arts/grpc.png" width="300">
 </p>
 
+---
+
 # grpc-android
 
 This is The Proto for this project. send a coffee and receive a coffee.
