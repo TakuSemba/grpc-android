@@ -1,11 +1,11 @@
 # grpc-android
 
-<img src="https://github.com/TakuSemba/grpc-android/blob/master/arts/grpc.png">
+<p align="center">
+  <img src="https://github.com/TakuSemba/grpc-android/blob/master/arts/grpc.png" width="300">
+</p>
 
 
-This is The Proto for this project.
-
-send a coffee and receive a coffee.
+This is The Proto for this project. send a coffee and receive a coffee.
 
 ```proto
 syntax = "proto3";
